@@ -1,4 +1,6 @@
-/* 全域變數設定：F1 賽車風格配色 */
+/* =========================================
+   全域變數設定：F1 賽車風格配色
+   ========================================= */
 :root {
     --bg-color: #000000;        /* 賽道黑 */
     --surface-color: #111111;   /* 碳纖維深灰 */
@@ -11,7 +13,9 @@
     --font-body: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* 基礎重置 */
+/* =========================================
+   基礎重置 (Reset)
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +43,9 @@ body {
     align-items: center;
 }
 
-/* Typography 標題與強調 */
+/* =========================================
+   Typography (字體與標題)
+   ========================================= */
 h1, h2, .nav-logo {
     font-family: var(--font-family);
     font-style: italic; /* 賽車速度感 */
@@ -68,7 +74,9 @@ h1, h2, .nav-logo {
     margin: 12px auto 0;
 }
 
-/* 導覽列 (置中佈局) */
+/* =========================================
+   導覽列 (Navbar)
+   ========================================= */
 .navbar {
     position: fixed;
     top: 0;
@@ -109,7 +117,9 @@ h1, h2, .nav-logo {
     color: var(--text-primary);
 }
 
-/* Section 通用設定 */
+/* =========================================
+   通用 Section 設定
+   ========================================= */
 .section {
     min-height: 100vh;
     display: flex;
@@ -119,7 +129,9 @@ h1, h2, .nav-logo {
     padding: 120px 0 80px 0; /* 增加上方 padding 避開 Navbar */
 }
 
-/* Hero 區塊 */
+/* =========================================
+   Hero 區塊 (首屏)
+   ========================================= */
 .hero-section {
     text-align: center;
     padding: 0 24px;
@@ -188,7 +200,9 @@ h1, h2, .nav-logo {
     transform: scale(1.05);
 }
 
-/* 關於我區塊 */
+/* =========================================
+   關於我 (About)
+   ========================================= */
 .about-section {
     background-color: var(--surface-color);
     border-top: 1px solid #222;
@@ -206,7 +220,147 @@ h1, h2, .nav-logo {
     margin-bottom: 24px;
 }
 
-/* 聯絡方式區塊 */
+/* =========================================
+   Skills 技能區塊
+   ========================================= */
+.skills-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.skill-category {
+    width: 100%;
+    text-align: center;
+}
+
+.skill-category-title {
+    font-family: var(--font-family);
+    color: var(--accent-color);
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.skill-tag {
+    background-color: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(225, 6, 0, 0.1);
+}
+
+/* =========================================
+   Projects 與 Courses 共用 Grid 排版
+   ========================================= */
+.projects-grid, .courses-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+/* 專案與課程卡片共用樣式 */
+.project-card, .course-card {
+    background-color: var(--surface-color);
+    border-left: 4px solid var(--accent-color); /* 左側紅色拉線 */
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover, .course-card:hover {
+    transform: translateX(10px); /* 滑鼠游標經過時向右衝刺 */
+    background-color: #1a0000;
+}
+
+.project-status {
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.project-title, .course-title {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    font-style: italic;
+}
+
+.project-short, .course-desc {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-align: left; /* 卡片內文靠左對齊以利閱讀 */
+}
+
+.project-detail {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    text-align: left; /* 保持細節內文靠左 */
+}
+
+/* 標籤群 (Tech & Course Skills) */
+.project-tech, .course-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag, .course-tag {
+    background-color: #222;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+}
+
+/* Course 專屬樣式 */
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #333;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.course-semester {
+    font-family: var(--font-family);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   聯絡方式 (Contact)
+   ========================================= */
 .contact-section {
     text-align: center;
 }
@@ -259,7 +413,9 @@ h1, h2, .nav-logo {
     font-weight: 600;
 }
 
-/* 頁尾 */
+/* =========================================
+   頁尾 (Footer)
+   ========================================= */
 .footer {
     text-align: center;
     padding: 30px;
@@ -271,7 +427,9 @@ h1, h2, .nav-logo {
     letter-spacing: 1px;
 }
 
-/* 響應式設計 (Mobile) */
+/* =========================================
+   響應式設計 (Mobile RWD)
+   ========================================= */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 3rem;
@@ -279,6 +437,8 @@ h1, h2, .nav-logo {
     
     .nav-links {
         gap: 20px;
+        flex-wrap: wrap; /* 手機版選單若過多則換行 */
+        justify-content: center;
     }
 
     .hero-actions {
@@ -299,5 +459,13 @@ h1, h2, .nav-logo {
     .contact-card {
         width: 100%;
         max-width: 300px;
+    }
+
+    .course-header {
+        flex-direction: column;
+    }
+
+    .project-card, .course-card {
+        padding: 20px;
     }
 }
