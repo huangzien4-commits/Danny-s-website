@@ -8,19 +8,24 @@
 </head>
 <body>
 
+    <!-- 導覽列 (全置中與擴充項目) -->
     <nav class="navbar">
         <div class="nav-logo">DANNY.</div>
         <ul class="nav-links">
             <li><a href="#hero">HOME</a></li>
             <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#courses">COURSES</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
 
+    <!-- Hero 區塊 (全置中、F1風格) -->
     <header id="hero" class="section hero-section">
         <div class="hero-content">
             <h1 class="hero-title">HELLO, I'M <span class="highlight">DANNY</span></h1>
-            <p class="hero-subtitle">專注於 AI 應用與軟硬體整合的電機工程學生。</p>
+            <p class="hero-subtitle">專注於 AI 應用與軟硬體整合的電機工程學子。</p>
             <div class="hero-actions">
                 <a href="#about" class="btn btn-primary">VIEW WORK</a>
                 <a href="#contact" class="btn btn-secondary">CONTACT ME</a>
@@ -28,6 +33,7 @@
         </div>
     </header>
 
+    <!-- 關於我區塊 -->
     <section id="about" class="section about-section">
         <div class="container">
             <h2 class="section-title">ABOUT ME</h2>
@@ -42,15 +48,49 @@
         </div>
     </section>
 
+    <!-- ===================================== -->
+    <!-- 新增區塊：Skills, Projects, Courses   -->
+    <!-- ===================================== -->
+
+    <!-- 技能區塊 -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">SKILLS</h2>
+            <!-- script.js 會將 JavaScript 資料轉化為 HTML 填入這個 div 中 -->
+            <div id="skills-container" class="skills-grid"></div>
+        </div>
+    </section>
+
+    <!-- 專案區塊 -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">PROJECTS</h2>
+            <!-- script.js 會將 JavaScript 資料轉化為 HTML 填入這個 div 中 -->
+            <div id="projects-container" class="projects-grid"></div>
+        </div>
+    </section>
+
+    <!-- 修課紀錄區塊 -->
+    <section id="courses" class="section courses-section">
+        <div class="container">
+            <h2 class="section-title">COURSES</h2>
+            <!-- script.js 會將 JavaScript 資料轉化為 HTML 填入這個 div 中 -->
+            <div id="courses-container" class="courses-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===================================== -->
+
+    <!-- 聯絡方式區塊 (已更新你的信箱) -->
     <section id="contact" class="section contact-section">
         <div class="container">
             <h2 class="section-title">GET IN TOUCH</h2>
             <p class="contact-text">無論是專案交流、技術討論或是潛在的合作機會，都歡迎隨時進入我的維修區 (Pit Lane) 與我聯繫。</p>
             
             <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-card">
+                <a href="mailto:huangzien4@gmail.com" class="contact-card">
                     <span class="contact-label">EMAIL</span>
-                    <span class="contact-value">hello@example.com</span>
+                    <span class="contact-value">huangzien4@gmail.com</span>
                 </a>
                 <a href="https://github.com/yourusername" target="_blank" class="contact-card">
                     <span class="contact-label">GITHUB</span>
@@ -64,10 +104,12 @@
         </div>
     </section>
 
+    <!-- 頁尾 -->
     <footer class="footer">
         <p>&copy; <span id="current-year"></span> DANNY. ALL RIGHTS RESERVED.</p>
     </footer>
 
     <script src="script.js"></script>
+    
 </body>
 </html>
